@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BX_RxSwift_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58c-Lf-Tic">
+                                <rect key="frame" x="232" y="106" width="101" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Nek-yc-U3E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAl-sb-so8">
+                                <rect key="frame" x="231" y="228" width="102" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jOw-ri-pBF"/>
+                                </constraints>
+                                <state key="normal" title="stop sequence"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="58c-Lf-Tic" firstAttribute="trailing" secondItem="IAl-sb-so8" secondAttribute="trailing" id="5YW-Ds-lgk"/>
+                            <constraint firstItem="58c-Lf-Tic" firstAttribute="centerX" secondItem="IAl-sb-so8" secondAttribute="centerX" id="8oP-S2-sMD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IAl-sb-so8" secondAttribute="bottom" constant="342" id="YNL-Ue-5IQ"/>
+                            <constraint firstItem="IAl-sb-so8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="231" id="bRm-DI-h4p"/>
+                            <constraint firstItem="58c-Lf-Tic" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="guh-hR-eKM"/>
+                            <constraint firstItem="IAl-sb-so8" firstAttribute="top" secondItem="58c-Lf-Tic" secondAttribute="bottom" constant="23" id="ozH-PC-jbh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counter" destination="58c-Lf-Tic" id="JEH-G5-fmj"/>
+                        <outlet property="disposeCounterButton" destination="IAl-sb-so8" id="aYX-fP-XhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="387"/>
+        </scene>
+    </scenes>
+</document>
