@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DisposeBag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtE-NO-110">
+                                <rect key="frame" x="270" y="388" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="186-35-ZjT"/>
+                                    <constraint firstAttribute="width" constant="60" id="b0M-pp-DgN"/>
+                                </constraints>
+                                <state key="normal" title="停止计时"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EN4-MS-kI4">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="oyO-KP-oae"/>
+                                    <constraint firstAttribute="width" constant="100" id="vgI-pT-Wic"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.17750853720000001" blue="0.2247862061" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RtE-NO-110" firstAttribute="top" secondItem="EN4-MS-kI4" secondAttribute="bottom" constant="38" id="MyO-63-UvO"/>
+                            <constraint firstItem="EN4-MS-kI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R19-bA-Lk4"/>
+                            <constraint firstItem="RtE-NO-110" firstAttribute="leading" secondItem="EN4-MS-kI4" secondAttribute="leading" id="Sw3-eO-HWT"/>
+                            <constraint firstItem="EN4-MS-kI4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="csr-Nz-UVQ"/>
+                            <constraint firstItem="RtE-NO-110" firstAttribute="centerX" secondItem="EN4-MS-kI4" secondAttribute="centerX" id="u5c-oJ-BcI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Sw3-eO-HWT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="counter" destination="EN4-MS-kI4" id="kWy-QO-Sht"/>
+                        <outlet property="disposeCounterButton" destination="RtE-NO-110" id="T4F-aq-h7C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

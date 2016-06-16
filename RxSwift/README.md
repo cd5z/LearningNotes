@@ -1,4 +1,3 @@
 # RxSwift学习笔记
-[https://boxueio.com/](https://boxueio.com/)
+打开此文件夹中的`RxSwiftDemo.xcworkspace`运行项目
 
-[http://reactivex.io/](http://reactivex.io/)
