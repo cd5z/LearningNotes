@@ -70,7 +70,17 @@ class AboutYouViewController: UIViewController {
             .bindTo(self.update.rx_enabled)
             .addDisposableTo(bag)
         
+        //双向绑定 self.knowSwift 和  self.swiftLevel
+        self.knowSwift.rx_value.map { $0 ? 0.25 : 0 }
+            .bindTo(self.swiftLevel.rx_value)
+            .addDisposableTo(bag)
+        self.swiftLevel.rx_value.map { $0 != 0 ? true : false }
+            .bindTo(self.knowSwift.rx_value)
+            .addDisposableTo(bag)
         
+        self.passionToLearn.rx_value.skip(1).subscribeNext({
+            self.heartHeight.constant = CGFloat($0 - 10)
+        }).addDisposableTo(bag)
         
     }
     

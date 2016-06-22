@@ -53,6 +53,9 @@ class ViewController: UIViewController {
 //        //将everythingObservable 与 self.register.rx_enabled 绑定
 //        everythingObservable.bindTo(self.register.rx_enabled)
 //        .addDisposableTo(bag)
+//        Observable.combineLatest(emailObservable, passwordObservable) { $0 && $1 }
+//            .bindTo(self.register.rx_enabled)
+//            .addDisposableTo(self.bag)
         
     }
 
