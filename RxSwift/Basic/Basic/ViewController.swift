@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 
 class ViewController: UIViewController {
+    @IBOutlet weak var email: UITextField!
     @IBOutlet weak var userInput: UITextField!
     @IBOutlet weak var rxUserInput: UITextField!
     override func viewDidLoad() {
