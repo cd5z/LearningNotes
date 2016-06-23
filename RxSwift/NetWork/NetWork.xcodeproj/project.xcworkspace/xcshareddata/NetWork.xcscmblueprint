@@ -4,23 +4,19 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "8B123162C394A0A0A138779108E4C59DD771865A" : 0,
-    "05222EDA62BE9CC6268F6429117D0B92EE764C36" : 0,
-    "4DD6810907F5B741470171C4B7D7EC023CD6437A" : 0,
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 0,
     "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 0,
-    "67620B5EFA902936DF04070AF595B76AB0333747" : 0
+    "05222EDA62BE9CC6268F6429117D0B92EE764C36" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FAA5116F-4670-45B8-8033-A3E218B0F941",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7AB00D14-FE8C-4706-AA67-6A6D2B989321",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "8B123162C394A0A0A138779108E4C59DD771865A" : "LearningNotes\/RxSwift\/RxSwift\/",
-    "05222EDA62BE9CC6268F6429117D0B92EE764C36" : "LearningNotes\/",
-    "4DD6810907F5B741470171C4B7D7EC023CD6437A" : "LearningNotes\/RxSwift\/RxDataSources\/",
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "LearningNotes\/RxSwift\/Alamofire\/",
     "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "LearningNotes\/RxSwift\/SwiftyJSON\/",
-    "67620B5EFA902936DF04070AF595B76AB0333747" : "LearningNotes\/RxSwift\/Alamofire\/"
+    "05222EDA62BE9CC6268F6429117D0B92EE764C36" : "LearningNotes\/"
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "RxSwiftDemo",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NetWork",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RxSwift\/RxSwiftDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RxSwift\/NetWork\/NetWork.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/codercd\/LearningNotes.git",
@@ -28,19 +24,9 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "05222EDA62BE9CC6268F6429117D0B92EE764C36"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:RxSwiftCommunity\/RxDataSources.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4DD6810907F5B741470171C4B7D7EC023CD6437A"
-    },
-    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Alamofire\/Alamofire.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ReactiveX\/RxSwift.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8B123162C394A0A0A138779108E4C59DD771865A"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:SwiftyJSON\/SwiftyJSON.git",

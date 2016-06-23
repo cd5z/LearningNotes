@@ -10,4 +10,7 @@
    <FileRef
       location = "group:UI/UI.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:NetWork/NetWork.xcodeproj">
+   </FileRef>
 </Workspace>

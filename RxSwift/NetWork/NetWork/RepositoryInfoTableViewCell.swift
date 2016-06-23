@@ -1,0 +1,30 @@
+//
+//  RepositoryInfoTableViewCell.swift
+//  NetWork
+//
+//  Created by LiChendi on 16/6/22.
+//  Copyright © 2016年 LiChendi. All rights reserved.
+//
+
+import UIKit
+
+class RepositoryInfoTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var detail: UITextView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        self.backgroundColor = UIColor.clearColor()
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+
+
+}

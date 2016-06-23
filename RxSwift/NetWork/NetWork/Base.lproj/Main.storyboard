@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C8m-4D-itg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Me7-CL-EH7">
+            <objects>
+                <viewController id="C8m-4D-itg" customClass="ViewController" customModule="NetWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qNh-sr-J7F"/>
+                        <viewControllerLayoutGuide type="bottom" id="uxM-QM-iXm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MU5-Yj-1Nv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wsy-7H-HHX">
+                                <rect key="frame" x="20" y="249" width="560" height="331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepositoryInfoCell" rowHeight="101" id="GMz-nd-gXv" customClass="RepositoryInfoTableViewCell" customModule="NetWork" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GMz-nd-gXv" id="jFM-1c-3gR">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="100.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWw-JN-HD3" userLabel="RepositoryCellStack">
+                                                    <rect key="frame" x="8" y="8" width="544" height="86"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gZI-Fi-l5K">
+                                                            <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="86" id="cUy-m5-hOi"/>
+                                                                <constraint firstAttribute="width" constant="86" id="dIG-D7-ygz"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Upu-It-SME" userLabel="RepositoryInfoStack">
+                                                            <rect key="frame" x="96" y="0.0" width="448" height="86"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2Q-gF-8Tg">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="448" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEt-vH-LhJ">
+                                                                    <rect key="frame" x="0.0" y="28" width="448" height="58"/>
+                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="86" id="0iB-c5-XdS"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HWw-JN-HD3" secondAttribute="trailing" id="3rW-FW-Eoz"/>
+                                                <constraint firstItem="HWw-JN-HD3" firstAttribute="leading" secondItem="jFM-1c-3gR" secondAttribute="leadingMargin" id="A6R-sH-YaK"/>
+                                                <constraint firstItem="HWw-JN-HD3" firstAttribute="top" secondItem="jFM-1c-3gR" secondAttribute="topMargin" id="UY1-QL-mbv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="avatar" destination="gZI-Fi-l5K" id="Evq-X0-xjD"/>
+                                            <outlet property="detail" destination="NEt-vH-LhJ" id="NZO-mf-zn8"/>
+                                            <outlet property="name" destination="p2Q-gF-8Tg" id="DmM-nx-gTj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Octocat" translatesAutoresizingMaskIntoConstraints="NO" id="utI-MX-W54">
+                                <rect key="frame" x="231" y="48" width="138" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="S61-sQ-deB"/>
+                                    <constraint firstAttribute="height" constant="117" id="YdJ-bV-oE3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search repository" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2I-ds-yY4">
+                                <rect key="frame" x="20" y="173" width="560" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2UK-pA-kzA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter repository name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xuC-cs-BgK">
+                                <rect key="frame" x="20" y="214" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="COI-Xg-8FD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wsy-7H-HHX" firstAttribute="top" secondItem="xuC-cs-BgK" secondAttribute="bottom" constant="5" id="1ae-F0-khD"/>
+                            <constraint firstItem="K2I-ds-yY4" firstAttribute="leading" secondItem="MU5-Yj-1Nv" secondAttribute="leadingMargin" id="1nw-kz-EEv"/>
+                            <constraint firstItem="K2I-ds-yY4" firstAttribute="trailing" secondItem="MU5-Yj-1Nv" secondAttribute="trailingMargin" id="FH7-Em-DRT"/>
+                            <constraint firstItem="Wsy-7H-HHX" firstAttribute="leading" secondItem="MU5-Yj-1Nv" secondAttribute="leadingMargin" id="JV6-e7-46d"/>
+                            <constraint firstItem="utI-MX-W54" firstAttribute="centerY" secondItem="MU5-Yj-1Nv" secondAttribute="centerY" constant="-193.5" id="K1X-Md-bp6"/>
+                            <constraint firstItem="utI-MX-W54" firstAttribute="centerX" secondItem="MU5-Yj-1Nv" secondAttribute="centerX" id="R68-04-3Oo"/>
+                            <constraint firstItem="xuC-cs-BgK" firstAttribute="trailing" secondItem="MU5-Yj-1Nv" secondAttribute="trailingMargin" id="Udi-uI-HUP"/>
+                            <constraint firstItem="uxM-QM-iXm" firstAttribute="top" secondItem="Wsy-7H-HHX" secondAttribute="bottom" constant="20" id="Waz-8Q-01W"/>
+                            <constraint firstItem="Wsy-7H-HHX" firstAttribute="trailing" secondItem="MU5-Yj-1Nv" secondAttribute="trailingMargin" id="Y1K-2D-X5q"/>
+                            <constraint firstItem="xuC-cs-BgK" firstAttribute="top" secondItem="K2I-ds-yY4" secondAttribute="bottom" constant="6" id="df0-dv-GrS"/>
+                            <constraint firstItem="xuC-cs-BgK" firstAttribute="leading" secondItem="MU5-Yj-1Nv" secondAttribute="leadingMargin" id="gUR-h1-UcY"/>
+                            <constraint firstItem="K2I-ds-yY4" firstAttribute="top" secondItem="utI-MX-W54" secondAttribute="bottom" constant="8" id="sbp-La-ogD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="repositoryName" destination="xuC-cs-BgK" id="uIu-8A-9Sd"/>
+                        <outlet property="searchResult" destination="Wsy-7H-HHX" id="BIk-EH-oJn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5MC-Hq-cCC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="380"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Octocat" width="596" height="508"/>
+    </resources>
+</document>
