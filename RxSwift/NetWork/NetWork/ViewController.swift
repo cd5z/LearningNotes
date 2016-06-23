@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import Alamofire
 import SwiftyJSON
+import RxDataSources
 
 
 class ViewController: UIViewController {
@@ -18,12 +19,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var repositoryName: UITextField!
     @IBOutlet weak var searchResult: UITableView!
     
+    
+    
     var bag: DisposeBag! = DisposeBag()
     
     typealias SectionTableModel = SectionModel<String, RepositoryModel>
+    let dataSource = RxTableViewSectionedReloadDataSource<SectionTableModel>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.searchResult.rxDidSelectRowAtIndexPath.subscribeNext { tableview,indexpath in
+            tableview.deselectRowAtIndexPath(indexpath, animated: true)
+        }.addDisposableTo(self.bag)
+        
+        self.dataSource.configureCell = {(_, tv, indexPath, element) in
+            let cell = tv.dequeueReusableCellWithIdentifier("RepositoryInfoCell", forIndexPath: indexPath) as! RepositoryInfoTableViewCell
+            cell.name.text = element.name
+            cell.detail.text = element.detail
+            
+            return cell
+        }
         // Do any additional setup after loading the view, typically from a nib.
         
         self.repositoryName.rx_text
@@ -35,19 +51,30 @@ class ViewController: UIViewController {
                 self.searchForGithub($0)
             }
             .subscribe(onNext: {respositoryModelArray in
+                self.searchResult.dataSource = nil
+//                    typealias O = Observable<[RepositoryModel]>
+//                    typealias CC = (Int, RepositoryModel, RepositoryInfoTableViewCell) -> Void
+//                
+//                    let binder: O -> CC -> Disposable = self.searchResult.rx_itemsWithCellIdentifier("RepositoryInfoCell", cellType: RepositoryInfoTableViewCell.self)
+//                
+//                    let currentArgument = {(rowIndex: Int,element: RepositoryModel, cell: RepositoryInfoTableViewCell) in
+//                        cell.name.text = element.name
+//                        cell.detail.text = element.detail
+//                    }
+//                
+//                    Observable.just(respositoryModelArray)
+//                        .bindTo(binder, curriedArgument: currentArgument)
+//                        .addDisposableTo(self.bag)
                 
-                }, onError: { error in
+                Observable.just(self.createGithubSectionModel(respositoryModelArray))
+                    .bindTo(self.searchResult.rx_itemsWithDataSource(self.dataSource))
+                    .addDisposableTo(self.bag)
+            }, onError: { error in
                 self.displayErrorAlert(error as NSError)
             })
             .addDisposableTo(self.bag)
     }
-    
-    
-    
-    func adddisposaablebag(bag: String) -> Int {
-        
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,6 +84,26 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
+    
+    private func createGithubSectionModel(repoInfo: [RepositoryModel]) -> [SectionTableModel] {
+        var ret:[SectionTableModel] = []
+        var items: [RepositoryModel] = []
+        if repoInfo.count < 10 {
+            ret.append(SectionTableModel(model: "TOP 1 - 10", items: repoInfo))
+        }else {
+            for i in 1...repoInfo.count {
+                items.append(repoInfo[i - 1])
+                let isSectionBreak = i / 10 != 0 && i % 10 == 0
+                if isSectionBreak {
+                    ret.append(SectionTableModel(model: "Top \(i  - 9) - \(i)", items: items))
+                    items = []
+                }
+                
+            }
+        }
+        return ret
+    }
+    
     private func searchForGithub(repositoryName: String) -> Observable<[RepositoryModel]> {
         return Observable.create {
             (observer: AnyObserver<[RepositoryModel]>) -> Disposable in
